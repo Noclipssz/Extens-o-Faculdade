@@ -43,7 +43,6 @@ public class Rum {
             }
         }
         for (Professor prof : ordenada) {
-        //    GeracaoDehr.setrandHrprof(prof.getHorarioDP());
             prof.ini();
             prof.leitura(prof.getHorarioDP());
         }
