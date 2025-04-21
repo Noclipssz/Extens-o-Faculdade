@@ -1,9 +1,9 @@
 package org.backend.PrimeiroTesteBT.classes;
 
 public class Materia {
-    private Integer id;
+    private Byte id;
     private String nome;
-    private Integer quantAulas;
+    private Byte quantAulas;
     private boolean check;
 
     public boolean isCheck() {
@@ -14,13 +14,13 @@ public class Materia {
         this.check = check;
     }
 
-    public Materia(Integer id, String nome, Integer quantAulas) {
+    public Materia(Byte id, String nome, Byte quantAulas) {
         this.id = id;
         this.nome = nome;
         this.quantAulas = quantAulas;
     }
 
-    public Integer getId() {
+    public Byte getId() {
         return id;
     }
 
@@ -28,7 +28,7 @@ public class Materia {
         return nome;
     }
 
-    public Integer getQuantAulas() {
+    public Byte getQuantAulas() {
         return quantAulas;
     }
 }

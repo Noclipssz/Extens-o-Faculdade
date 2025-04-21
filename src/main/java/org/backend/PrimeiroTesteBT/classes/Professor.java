@@ -1,19 +1,17 @@
 package org.backend.PrimeiroTesteBT.classes;
 
-
 public class Professor {
-    private Integer id;
+    private byte id;
     private String nome;
     private Materia materia;
-    private Integer[][] HorarioDP;
+    private byte[][] HorarioDP;
+    private byte[] SemanaCont = new byte[6]; // substituído Byte[] por byte[]
 
-    private Integer[] SemanaCont = new Integer[6]; // temporario
-
-    public Integer[] getSemanaCont() {
+    public byte[] getSemanaCont() {
         return SemanaCont;
     }
 
-    public Integer[][] getHorarioDP() {
+    public byte[][] getHorarioDP() {
         return HorarioDP;
     }
 
@@ -25,22 +23,23 @@ public class Professor {
         return nome;
     }
 
-    public Integer getId() {
+    public byte getId() {
         return id;
     }
 
-
-    public Professor(Integer id, String nome, Materia materia, Integer[][] horarioDP) {
+    public Professor(byte id, String nome, Materia materia, byte[][] horarioDP) {
         this.id = id;
         this.nome = nome;
         this.materia = materia;
-        HorarioDP = horarioDP;
+        this.HorarioDP = horarioDP;
     }
-    public void leitura(Integer[][] horarioDP) {
+
+    public void leitura(byte[][] horarioDP) {
+        ini(); // zera antes de usar
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
-                if (HorarioDP[i][j] != 0) {
-                    SemanaCont[i] += 1;
+                if (horarioDP[i][j] != 0) {
+                    SemanaCont[i]++;
                 }
             }
         }
@@ -49,31 +48,28 @@ public class Professor {
         }
     }
 
-    public byte ApDiSemana(Integer[] SemanaCont) {
+    public byte ApDiSemana(byte[] SemanaCont) {
         for (int i = 0; i < 5; i++) {
             if (SemanaCont[i] == 1) {
-                return (byte)i;
+                return (byte) i;
             }
         }
-        return (byte)9;
+        return (byte) 9;
     }
 
-    public void ini(){
+    public void ini() {
         for (int i = 0; i < 6; i++) {
             SemanaCont[i] = 0;
         }
     }
 
-
     public void mostrar() {
         System.out.println(materia.getNome());
         System.out.println("segunda: " + SemanaCont[0]);
-        System.out.println("terceira: " + SemanaCont[1]);
+        System.out.println("terça: " + SemanaCont[1]);
         System.out.println("quarta: " + SemanaCont[2]);
         System.out.println("quinta: " + SemanaCont[3]);
         System.out.println("sexta: " + SemanaCont[4]);
         System.out.println("Total: " + SemanaCont[5]);
     }
-
-
 }
