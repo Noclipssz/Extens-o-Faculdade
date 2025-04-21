@@ -6,8 +6,6 @@ import java.util.Collections;
 public class Rum {
     static String[][] HrAulas = new String[5][5];
 
-// Arrays de horários individuais para cada matéria
-        static byte[][] MatHrMatematica = new byte[5][5];
         static byte[][] MatHrHistoria = new byte[5][5];
         static byte[][] MatHrGeografia = new byte[5][5];
         static byte[][] MatHrPortugues = new byte[5][5];
@@ -19,7 +17,6 @@ public class Rum {
         static byte[][] MatHrEducacaoFisica = new byte[5][5];
         static byte[][] MatHrIngles = new byte[5][5];
 
-        // Criação de professores com horários exclusivos
         static Professor p1 = new Professor((byte) 1, "Kairo", new Materia((byte) 1, "Matemática", (byte) 3), GeracaoDehr.setrandHrprof(MatHrHistoria));
         static Professor p2 = new Professor((byte) 2, "Maria", new Materia((byte) 2, "História", (byte) 2), GeracaoDehr.setrandHrprof(MatHrHistoria));
         static Professor p3 = new Professor((byte) 3, "João", new Materia((byte) 3, "Geografia", (byte) 2), GeracaoDehr.setrandHrprof(MatHrGeografia));
