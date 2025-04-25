@@ -6,6 +6,9 @@ import java.util.concurrent.ThreadLocalRandom;
 public class GeracaoDehr {
     private static ArrayList<Professor> listas = new ArrayList<>();
 
+
+    // classe temporaria aguardando front-end
+
     public static byte[][] setrandHrprof(byte[][] hora) {
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
